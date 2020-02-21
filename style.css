@@ -1,0 +1,65 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  margin: 0;
+  color: #8396a5;
+  user-select: none;
+}
+
+#score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 250px;
+  font: 40px sans-serif;
+}
+
+#field {
+  display: grid;
+  grid-template: repeat(3, 80px) / repeat(3, 80px);
+  grid-gap: 5px;
+  height: auto;
+  width: auto;
+  padding: 5px;
+  margin-bottom: 10px;
+  background: #8396a5;
+}
+
+#field div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  background: #e2e2e2;
+  font: 40px sans-serif;
+  transition: background 1s;
+}
+
+#restart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 250px;
+  cursor: pointer;
+  background: #e2e2e2;
+  outline: 5px solid #8396a5;
+  font: 40px sans-serif;
+  transition: background 1s;
+  visibility: hidden;
+}
+
+#field div:hover,
+#restart:hover {
+  background: #c5dde5;
+}
