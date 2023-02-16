@@ -1,25 +1,14 @@
-html {
+html, body {
   height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: inherit;
   margin: 0;
+  font: 40px sans-serif;
   color: #8396a5;
   user-select: none;
 }
 
 #score {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 60px;
   width: 250px;
-  font: 40px sans-serif;
 }
 
 #field {
@@ -29,32 +18,21 @@ body {
   height: auto;
   width: auto;
   padding: 5px;
-  margin-bottom: 10px;
   background: #8396a5;
 }
 
 #field div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 80px;
   height: 80px;
-  cursor: pointer;
   background: #e2e2e2;
-  font: 40px sans-serif;
   transition: background 1s;
 }
 
 #restart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 80px;
   width: 250px;
-  cursor: pointer;
   background: #e2e2e2;
   outline: 5px solid #8396a5;
-  font: 40px sans-serif;
   transition: background 1s;
   visibility: hidden;
 }
@@ -62,4 +40,25 @@ body {
 #field div:hover,
 #restart:hover {
   background: #c5dde5;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.center-content {
+  justify-content: center;
+  align-items: center;
+}
+
+.cur-pointer {
+  cursor: pointer;
+}
+
+.m-bottom-10 {
+  margin-bottom: 10px;
 }
