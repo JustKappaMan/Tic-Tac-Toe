@@ -23,7 +23,7 @@
     cell.addEventListener('click', e => {
       // Player turn
       const playerCell = document.querySelector(`#${e.target.id}`);
-      playerCell.innerText = '🔥';
+      playerCell.innerText = '❌';
       playerCell.style.pointerEvents = 'none';
 
       if (someoneWon()) {
@@ -51,7 +51,7 @@
           aiCell = cells[Math.floor(Math.random() * 9)];
         }
 
-        aiCell.innerText = '🌊';
+        aiCell.innerText = '⭕';
         aiCell.style.pointerEvents = 'none';
       
         if (someoneWon()) {
