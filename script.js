@@ -21,14 +21,21 @@
     areEqual(cells[2], cells[4], cells[6]);
 
   const noEmptyCells = () => [...cells].every((cell) => cell.innerText);
-  
+
+  const randomItem = (arr) =>
+    arr.splice(Math.floor(Math.random() * arr.length), 1);
+
+  let emojis = ['❌', '⭕'];
+  const playerEmoji = randomItem(emojis);
+  const aiEmoji = randomItem(emojis);
+
   let score = 0;
 
   cells.forEach((cell) => {
     cell.addEventListener('click', (e) => {
       // Player turn
       const playerCell = document.querySelector(`#${e.target.id}`);
-      playerCell.innerText = '❌';
+      playerCell.innerText = playerEmoji;
       playerCell.style.pointerEvents = 'none';
 
       if (someoneWon()) {
@@ -56,7 +63,7 @@
           aiCell = cells[Math.floor(Math.random() * 9)];
         }
 
-        aiCell.innerText = '⭕';
+        aiCell.innerText = aiEmoji;
         aiCell.style.pointerEvents = 'none';
 
         if (someoneWon()) {
