@@ -1,4 +1,12 @@
-html, body {
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   height: 100%;
   margin: 0;
   font: 40px sans-serif;
@@ -7,6 +15,9 @@ html, body {
 }
 
 #score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 60px;
   width: 250px;
 }
@@ -18,47 +29,35 @@ html, body {
   height: auto;
   width: auto;
   padding: 5px;
+  margin-bottom: 10px;
   background: #8396a5;
 }
 
-#field div {
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80px;
   height: 80px;
   background: #e2e2e2;
   transition: background 1s;
+  cursor: pointer;
 }
 
 #restart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 80px;
   width: 250px;
   background: #e2e2e2;
   outline: 5px solid #8396a5;
   transition: background 1s;
   visibility: hidden;
-}
-
-#field div:hover,
-#restart:hover {
-  background: #c5dde5;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.center-content {
-  justify-content: center;
-  align-items: center;
-}
-
-.cur-pointer {
   cursor: pointer;
 }
 
-.m-bottom-10 {
-  margin-bottom: 10px;
+.cell:hover,
+#restart:hover {
+  background: #c5dde5;
 }
