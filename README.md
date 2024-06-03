@@ -5,7 +5,6 @@
 Tic-Tac-Toe game.
 
 ## Credits
-* [JetBrains](https://www.jetbrains.com) for [Open Source Development license](https://www.jetbrains.com/community/opensource)
 * [Zulfa Mahendra](https://www.flaticon.com/authors/zulfa-mahendra) for the favicons
 
 ## License
